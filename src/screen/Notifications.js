@@ -14,7 +14,7 @@ import {
 } from '../Components/ReusableComponets/Dimensions';
 import Colors from '../Components/utils/Colors';
 
-export default function Notifications({navigation}) {
+export default function Notifications({ navigation }) {
   const SrtData = [
     {
       PoolSize: '10,000',
@@ -85,14 +85,13 @@ export default function Notifications({navigation}) {
   ];
 
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: Colors.Balck}}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: Colors.Balck }}>
       <View
         style={{
           backgroundColor: Colors.Balck,
           paddingHorizontal: '4%',
           flexDirection: 'row',
           paddingVertical: 13,
-          //   marginTop: 35,
           justifyContent: 'space-between',
           alignItems: 'center',
         }}>
@@ -100,12 +99,12 @@ export default function Notifications({navigation}) {
           <Image
             source={require('../assets/leftarrow2.png')}
             style={[
-              {resizeMode: 'contain', borderRadius: 100},
-              {height: heightPixel(30), width: widthPixel(30)},
+              { resizeMode: 'contain', borderRadius: 100 },
+              { height: heightPixel(30), width: widthPixel(30) },
             ]}
           />
         </TouchableOpacity>
-        <View style={{alignItems: 'center'}}>
+        <View style={{ alignItems: 'center' }}>
           <Text
             style={{
               fontWeight: '500',
@@ -151,12 +150,12 @@ export default function Notifications({navigation}) {
           Mark All as Read
         </Text>
       </View>
-      <ScrollView contentContainerStyle={{paddingBottom: 30}}>
+      <ScrollView contentContainerStyle={{ paddingBottom: 30 }}>
         {SrtData.map((value, index) => (
           <View
             key={index}
             style={{
-              height: heightPixel(120),
+              height: heightPixel(130),
               marginTop: 20,
               marginHorizontal: 15,
               borderRadius: 10,
@@ -172,10 +171,10 @@ export default function Notifications({navigation}) {
                 borderTopLeftRadius: 10,
                 borderTopRightRadius: 10,
               }}>
-              <Text style={{color: '#d3d3d3'}}>Opening At: 10 Am</Text>
-              <View style={{flexDirection: 'row'}}>
-                <Text style={{color: '#d3d3d3', right: 6}}>Generic:-</Text>
-                <Text style={{color: '#d3d3d3'}}>Garhwali</Text>
+              <Text style={{ color: '#d3d3d3' }}>Opening At: 10 Am</Text>
+              <View style={{ flexDirection: 'row' }}>
+                <Text style={{ color: '#d3d3d3', right: 6 }}>Generic:-</Text>
+                <Text style={{ color: '#d3d3d3' }}>Garhwali</Text>
               </View>
             </View>
             <View
@@ -187,8 +186,8 @@ export default function Notifications({navigation}) {
                 alignItems: 'center',
               }}>
               <View>
-                <View style={{flexDirection: 'row'}}>
-                  <Text style={{color: Colors.Withe, fontSize: fontPixel(21)}}>
+                <View style={{ flexDirection: 'row' }}>
+                  <Text style={{ color: Colors.Withe, fontSize: fontPixel(21) }}>
                     Pool Size:-
                   </Text>
                   <Text
@@ -201,39 +200,34 @@ export default function Notifications({navigation}) {
                   </Text>
                 </View>
                 <Text
-                  style={{color: '#b4b4b4', left: 10, fontSize: fontPixel(21)}}>
+                  style={{ color: '#b4b4b4', fontSize: fontPixel(21), }}>
                   #1028DE
                 </Text>
-                <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                  <Text
-                    style={{
-                      color: Colors.Chinesepurple,
-                      left: 5,
-                      fontSize: fontPixel(18),
-                    }}>
-                    o
-                  </Text>
+
+                <View style={{ flexDirection: 'row', right: 15, alignItems: 'center', top: -8 }}>
+                  <Image source={require('../assets/full.png')} style={{ height: 35, width: 35, }} />
                   <Text
                     style={{
                       color: '#b4b4b4',
-                      left: 10,
                       fontSize: fontPixel(12),
+                      right: 6
                     }}>
                     22 Min ago
                   </Text>
                 </View>
+
               </View>
               <TouchableOpacity
                 // onPress={() => navigation.navigate("EditSaveScreen")}
 
                 style={{
                   paddingVertical: 6,
-                  backgroundColor: value.btrColor,
+                  // backgroundColor: value.btrColor,
                   width: widthPixel(80),
                   alignItems: 'center',
                   borderRadius: 4,
                 }}>
-                <Text style={{color: Colors.Withe}}>{value.btrName}</Text>
+                <Text style={{ color: Colors.Withe }}>{value.btrName}</Text>
               </TouchableOpacity>
             </View>
           </View>

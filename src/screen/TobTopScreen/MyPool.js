@@ -16,7 +16,7 @@ import Colors from '../../Components/utils/Colors';
 import * as Progress from 'react-native-progress';
 import LinearGradient from 'react-native-linear-gradient';
 
-export default function MyPool({navigation}) {
+export default function MyPool({ navigation }) {
   const SrtData = [
     {
       PoolSize: '10,000',
@@ -56,13 +56,13 @@ export default function MyPool({navigation}) {
     },
   ];
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: Colors.Balck}}>
-      <ScrollView contentContainerStyle={{paddingBottom: 30}}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: Colors.Balck }}>
+      <ScrollView contentContainerStyle={{ paddingBottom: 30 }}>
         {SrtData.map((value, index) => (
           <View
             key={index}
             style={{
-              height: heightPixel(215),
+              height: heightPixel(205),
               marginTop: 20,
               marginHorizontal: 15,
               borderRadius: 10,
@@ -78,10 +78,10 @@ export default function MyPool({navigation}) {
                 borderTopLeftRadius: 10,
                 borderTopRightRadius: 10,
               }}>
-              <Text style={{color: '#d3d3d3'}}>#BLRO123</Text>
-              <View style={{flexDirection: 'row'}}>
-                <Text style={{color: '#d3d3d3', right: 6}}>Generic:-</Text>
-                <Text style={{color: '#d3d3d3'}}>Garhwali</Text>
+              <Text style={{ color: '#d3d3d3' }}>#BLRO123</Text>
+              <View style={{ flexDirection: 'row' }}>
+                <Text style={{ color: '#d3d3d3', right: 6 }}>Generic:-</Text>
+                <Text style={{ color: '#d3d3d3' }}>Garhwali</Text>
               </View>
             </View>
             <View
@@ -92,8 +92,8 @@ export default function MyPool({navigation}) {
                 top: 10,
                 alignItems: 'center',
               }}>
-              <View style={{flexDirection: 'row'}}>
-                <Text style={{color: Colors.Withe, fontSize: fontPixel(21)}}>
+              <View style={{ flexDirection: 'row' }}>
+                <Text style={{ color: Colors.Withe, fontSize: fontPixel(21) }}>
                   Pool Size:-
                 </Text>
                 <Text
@@ -109,21 +109,23 @@ export default function MyPool({navigation}) {
                                 <Text style={{ color: Colors.Withe, }}>Details</Text>
                             </TouchableOpacity> */}
             </View>
-            <View style={{alignItems: 'center', marginTop: 20}}>
+            <View style={{ alignItems: 'center', marginTop: 20 }}>
               {/* <Progress.Bar progress={0.5} width={widthPixel(340)} height={7} color={Colors.Chinesepurple} /> */}
-              <LinearGradient
-                colors={['#962fec', '#d62abc']}
-                start={{x: 0, y: 0}}
-                end={{x: 1, y: 0}}
-                style={{
-                  height: heightPixel(7),
-                  width: widthPixel(340),
-                  backgroundColor: 'red',
-                  borderRadius: 25,
-                }}>
-                {/* <View style={{  height: heightPixel(7), width: widthPixel(340), backgroundColor: Colors.Withe }}> */}
-                {/* </View> */}
-              </LinearGradient>
+              <View style={{ height: heightPixel(7), width: widthPixel(340), backgroundColor: Colors.Withe, borderRadius: 25 }}>
+                <LinearGradient
+                  colors={['#962fec', '#d62abc']}
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                  style={{
+                    height: heightPixel(7),
+                    width: widthPixel(190),
+                    backgroundColor: 'red',
+                    borderRadius: 25,
+                  }}>
+                  {/* <View style={{  height: heightPixel(7), width: widthPixel(340), backgroundColor: Colors.Withe }}> */}
+                  {/* </View> */}
+                </LinearGradient>
+              </View>
             </View>
             <View
               style={{
@@ -131,11 +133,12 @@ export default function MyPool({navigation}) {
                 justifyContent: 'space-between',
                 paddingHorizontal: 17,
                 marginTop: 5,
+                top: 3
               }}>
-              <Text style={{color: Colors.Lightgrey, fontWeight: '500'}}>
+              <Text style={{ color: Colors.Lightgrey, fontWeight: '500' }}>
                 5,000 Left
               </Text>
-              <Text style={{color: Colors.Lightgrey, fontWeight: '500'}}>
+              <Text style={{ color: Colors.Lightgrey, fontWeight: '500' }}>
                 10,000 Slots
               </Text>
             </View>
@@ -146,9 +149,9 @@ export default function MyPool({navigation}) {
                 paddingHorizontal: 15,
                 marginTop: 7,
               }}>
-              <View style={{alignItems: 'center'}}>
-                <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                  <Text style={{color: Colors.Withe, fontSize: fontPixel(17)}}>
+              <View style={{ alignItems: 'center' }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                  <Text style={{ color: Colors.Withe, fontSize: fontPixel(16) }}>
                     Reward
                   </Text>
                   <Text
@@ -160,14 +163,14 @@ export default function MyPool({navigation}) {
                     5,000
                   </Text>
                 </View>
-                <Text style={{color: Colors.Withe, fontSize: fontPixel(15)}}>
+                <Text style={{ color: Colors.Withe, fontSize: fontPixel(14) }}>
                   1"5,000,2":3,000
                 </Text>
               </View>
 
-              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <Text
-                  style={{color: Colors.Withe, fontWeight: '500', right: 12}}>
+                  style={{ color: Colors.Withe, fontWeight: '500', right: 12 }}>
                   Entry
                 </Text>
                 <TouchableOpacity
@@ -179,7 +182,7 @@ export default function MyPool({navigation}) {
                     alignItems: 'center',
                     borderRadius: 4,
                   }}>
-                  <Text style={{color: Colors.Withe, fontWeight: '500'}}>
+                  <Text style={{ color: Colors.Withe, fontWeight: '500' }}>
                     Leaderboard
                   </Text>
                 </TouchableOpacity>
@@ -191,13 +194,13 @@ export default function MyPool({navigation}) {
                 justifyContent: 'space-between',
                 paddingHorizontal: 15,
                 backgroundColor: '#504F4F',
-                paddingVertical: 5,
+                paddingVertical: 6,
                 borderBottomLeftRadius: 10,
                 borderBottomRightRadius: 10,
                 marginVertical: 8,
               }}>
-              <View style={{flexDirection: 'row'}}>
-                <Text style={{color: Colors.Withe, fontSize: fontPixel(15)}}>
+              <View style={{ flexDirection: 'row' }}>
+                <Text style={{ color: Colors.Withe, fontSize: fontPixel(15) }}>
                   Start at: 8 Pm
                 </Text>
                 <Text
@@ -210,7 +213,7 @@ export default function MyPool({navigation}) {
                 </Text>
               </View>
 
-              <Text style={{color: Colors.Withe, fontSize: fontPixel(15)}}>
+              <Text style={{ color: Colors.Withe, fontSize: fontPixel(15) }}>
                 04-Jan-2023
               </Text>
             </View>

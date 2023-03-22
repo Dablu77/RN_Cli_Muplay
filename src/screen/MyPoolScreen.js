@@ -26,10 +26,10 @@ export default function MyPoolScreen({ navigation }) {
                 onPress={() => navigation.goBack('')} />
             <View style={{ flex: 1 }}>
                 <Tab.Navigator screenOptions={{
-                    tabBarLabelStyle: { fontSize: 14, fontWeight: 'bold', },
+                    tabBarLabelStyle: { fontSize: 12, fontWeight: 'bold', },
                     tabBarStyle: { backgroundColor: 'black', },
                     tabBarActiveTintColor: Colors.Withe,
-                    // tabBarItemStyle: { width: widthPixel(125) },
+                    tabBarItemStyle: { width: widthPixel(120) },
 
                     tabBarIndicatorStyle: {
                         borderBottomColor: Colors.Chinesepurple,

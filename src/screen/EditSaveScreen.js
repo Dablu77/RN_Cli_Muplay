@@ -44,12 +44,19 @@ export default function EditSaveScreen({ navigation }) {
             </View>
             <View>
                 <Text style={{ color: Colors.Lightgrey, paddingHorizontal: 25, fontWeight: '500' }}>
-                    Generative Pre-trained Transformer 3 is an autoregressive language model released in 2020 that uses deep learning to produce human-like text. Given an initial text as prompt, it will produce text that continues the prompt
+                    model released in 2020 that uses deep learning to produce human-like text. Given an initial text as prompt, it will produce text that continues the prompt
                 </Text>
             </View>
-            <ScrollView contentContainerStyle={{ paddingBottom: 30 }}>
+            <View style={{ marginTop: 10, }}>
+                <Text style={{ textAlign: 'center', color: Colors.Withe, fontWeight: '500', fontSize: fontPixel(23) }}>
+                    Your Play List
+                </Text>
+            </View>
+            <ScrollView contentContainerStyle={{ paddingBottom: 30, marginTop: 10 }}>
                 {SrtData.map((Value, index) => (
-                    <View
+                    <TouchableOpacity
+                        onPress={toggleBottomNavigationView}
+
                         key={index}
                         style={{ justifyContent: 'center', height: heightPixel(60), backgroundColor: "#1D1D1D", marginVertical: 10, marginHorizontal: 15, borderRadius: 50 }}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20 }}>
@@ -63,7 +70,7 @@ export default function EditSaveScreen({ navigation }) {
                             </View>
                             <View style={{ flexDirection: "row", alignItems: 'center' }}>
                                 <TouchableOpacity>
-                                    <Image source={require('../assets/play.png')} style={{ height: heightPixel(35), width: widthPixel(35), right: 10 }} />
+                                    <Image source={require('../assets/playbuttonarrowhead.png')} style={{ height: heightPixel(25), width: widthPixel(25), right: 10 }} />
                                 </TouchableOpacity>
                                 <TouchableOpacity
                                     onPress={toggleBottomNavigationView}
@@ -72,7 +79,7 @@ export default function EditSaveScreen({ navigation }) {
                                 </TouchableOpacity>
                             </View>
                         </View>
-                    </View>
+                    </TouchableOpacity>
                 ))}
                 <View style={{ flexDirection: 'row', justifyContent: 'flex-end', marginHorizontal: 20, marginTop: 15 }}>
                     <TouchableOpacity
@@ -120,7 +127,7 @@ export default function EditSaveScreen({ navigation }) {
                     <View style={{ alignItems: 'center', justifyContent: 'center', }}>
                         <Text style={{ color: Colors.Withe, fontSize: fontPixel(28), fontWeight: '500', marginTop: 10 }}>Janam janam</Text>
                         <View style={{ marginTop: 20, alignItems: 'center', justifyContent: 'center', height: heightPixel(120), width: widthPixel(120), backgroundColor: '#9839', borderRadius: 100 }}>
-                            <Image source={require('../assets/man.png')} style={{ height: heightPixel(120), width: widthPixel(120), borderRadius: 100, resizeMode: 'cover', }} />
+                            <Image source={require('../assets/man2.png')} style={{ height: heightPixel(120), width: widthPixel(120), borderRadius: 100, resizeMode: 'contain', }} />
                         </View>
                         <Text style={{ color: Colors.Withe, fontSize: fontPixel(20), fontWeight: '500', marginTop: 20 }}>
                             Aditya Preeti

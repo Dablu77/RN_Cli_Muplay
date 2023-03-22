@@ -6,7 +6,7 @@ import { fontPixel, heightPixel } from '../../Components/ReusableComponets/Dimen
 export default function Reward() {
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: Colors.Balck }}>
-            <View style={{ height: heightPixel(193), backgroundColor: Colors.Withe, margin: 25, borderTopRightRadius: 10, borderTopLeftRadius: 10 }}>
+            <View style={{ height: heightPixel(200), backgroundColor: Colors.Withe, margin: 25, borderTopRightRadius: 10, borderTopLeftRadius: 10 }}>
                 <View style={{ borderTopRightRadius: 10, borderTopLeftRadius: 10, height: heightPixel(50), backgroundColor: Colors.Chinesepurple, alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row', paddingHorizontal: 30 }}>
                     <Text style={{ color: Colors.Withe, fontSize: fontPixel(18), fontWeight: '500' }}>Rank</Text>
                     <Text style={{ color: Colors.Withe, fontSize: fontPixel(18), fontWeight: '500' }}>Winning</Text>

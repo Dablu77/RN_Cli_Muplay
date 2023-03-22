@@ -1,6 +1,6 @@
-import {View, Text, SafeAreaView, TouchableOpacity} from 'react-native';
+import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 import React from 'react';
-import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
 import Header from '../Components/ReusableComponets/Header';
 import {
@@ -18,9 +18,9 @@ import LinearGradient from 'react-native-linear-gradient';
 
 const Tab = createMaterialTopTabNavigator();
 
-export default function RankWinningScreen({navigation}) {
+export default function RankWinningScreen({ navigation }) {
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: Colors.Balck}}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: Colors.Balck }}>
       <Header
         height={heightPixel(30)}
         width={widthPixel(30)}
@@ -61,21 +61,23 @@ export default function RankWinningScreen({navigation}) {
           }}>
           10,000
         </Text>
-        <View style={{alignItems: 'center'}}>
+        <View style={{ alignItems: 'center' }}>
           {/* <Progress.Bar progress={0.5} width={widthPixel(325)} height={6} color={Colors.Chinesepurple} /> */}
-          <LinearGradient
-            colors={['#962fec', '#d62abc']}
-            start={{x: 0, y: 0}}
-            end={{x: 1, y: 0}}
-            style={{
-              height: heightPixel(7),
-              width: widthPixel(340),
-              backgroundColor: 'red',
-              borderRadius: 25,
-            }}>
-            {/* <View style={{  height: heightPixel(7), width: widthPixel(340), backgroundColor: Colors.Withe }}> */}
-            {/* </View> */}
-          </LinearGradient>
+          <View style={{ height: heightPixel(7), width: widthPixel(340), backgroundColor: Colors.Withe, borderRadius: 25 }}>
+            <LinearGradient
+              colors={['#962fec', '#d62abc']}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 0 }}
+              style={{
+                height: heightPixel(7),
+                width: widthPixel(190),
+                backgroundColor: 'red',
+                borderRadius: 25,
+              }}>
+              {/* <View style={{  height: heightPixel(7), width: widthPixel(340), backgroundColor: Colors.Withe }}> */}
+              {/* </View> */}
+            </LinearGradient>
+          </View>
         </View>
         <View
           style={{
@@ -84,10 +86,10 @@ export default function RankWinningScreen({navigation}) {
             paddingHorizontal: 22,
             marginTop: 5,
           }}>
-          <Text style={{color: Colors.Lightgrey, fontWeight: '500'}}>
+          <Text style={{ color: Colors.Lightgrey, fontWeight: '500' }}>
             5,000 Left
           </Text>
-          <Text style={{color: Colors.Lightgrey, fontWeight: '500'}}>
+          <Text style={{ color: Colors.Lightgrey, fontWeight: '500' }}>
             10,000 Slots
           </Text>
         </View>
@@ -102,7 +104,7 @@ export default function RankWinningScreen({navigation}) {
             marginTop: 15,
             alignItems: 'center',
           }}>
-          <Text style={{color: '#5c5c5c', fontWeight: '500'}}>20 Min Left</Text>
+          <Text style={{ color: '#5c5c5c', fontWeight: '500' }}>20 Min Left</Text>
         </View>
       </View>
       <TouchableOpacity
@@ -123,17 +125,24 @@ export default function RankWinningScreen({navigation}) {
           Join 1,000
         </Text>
       </TouchableOpacity>
-      <View style={{flex: 1}}>
+      <View style={{ flex: 1 }}>
         <Tab.Navigator
           screenOptions={{
-            tabBarLabelStyle: {fontSize: 14, fontWeight: 'bold'},
-            tabBarStyle: {backgroundColor: 'black'},
-            tabBarItemStyle: {width: 128},
+            tabBarLabelStyle: { fontSize: 12, fontWeight: 'bold' },
+            tabBarStyle: { backgroundColor: 'black' },
+            tabBarItemStyle: { width: 120 },
             tabBarActiveTintColor: Colors.Withe,
             tabBarIndicatorStyle: {
               borderBottomColor: Colors.Chinesepurple,
               borderBottomWidth: 2,
+              width: widthPixel(100),
+              // marginLeft: "%"
+              marginHorizontal: 18
             },
+
+
+
+
           }}>
           <Tab.Screen name="Reward" component={Reward} />
           <Tab.Screen name="Leaderboard" component={Leaderboard} />

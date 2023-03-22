@@ -7,7 +7,7 @@ import {
   ScrollView,
   StyleSheet,
 } from 'react-native';
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import {
   fontPixel,
   heightPixel,
@@ -20,7 +20,7 @@ import Colors from '../../Components/utils/Colors';
 // import { LinearGradient } from 'expo-linear-gradient';
 import LinearGradient from 'react-native-linear-gradient';
 
-export default function AllScreen({navigation}) {
+export default function AllScreen({ navigation }) {
   const SrtData = [
     {
       PoolSize: '10,000',
@@ -60,7 +60,7 @@ export default function AllScreen({navigation}) {
     },
   ];
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: Colors.Balck}}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: Colors.Balck }}>
       <View
         style={{
           height: heightPixel(50),
@@ -74,16 +74,16 @@ export default function AllScreen({navigation}) {
             justifyContent: 'space-between',
             paddingHorizontal: 15,
           }}>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <Text style={{color: Colors.Withe, fontWeight: '500'}}>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <Text style={{ color: Colors.Withe, fontWeight: '500' }}>
               Sort By:
             </Text>
-            <Text style={{color: Colors.Withe, left: 10, fontWeight: '500'}}>
+            <Text style={{ color: Colors.Withe, left: 10, fontWeight: '500' }}>
               ENRTY
             </Text>
             <Image
               source={require('../../assets/download.png')}
-              style={{height: heightPixel(15), width: widthPixel(15), left: 12}}
+              style={{ height: heightPixel(15), width: widthPixel(15), left: 12 }}
             />
           </View>
           <Text
@@ -94,14 +94,14 @@ export default function AllScreen({navigation}) {
             }}>
             Pool Size
           </Text>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Text
-              style={{color: Colors.Lightgrey, fontWeight: 'bold', right: 13}}>
+              style={{ color: Colors.Lightgrey, fontWeight: 'bold', right: 13 }}>
               Start Date
             </Text>
             <Image
               source={require('../../assets/filterfilledtoolsymbol.png')}
-              style={{height: heightPixel(17), width: widthPixel(17)}}
+              style={{ height: heightPixel(17), width: widthPixel(17) }}
             />
           </View>
         </View>
@@ -113,13 +113,13 @@ export default function AllScreen({navigation}) {
           paddingHorizontal: 15,
           paddingVertical: 5,
         }}>
-        <Text style={{color: Colors.Withe}}>50 Result Found</Text>
-        <View style={{flexDirection: 'row'}}>
-          <Text style={{color: Colors.Withe, right: 10}}>1 Sort Applied</Text>
-          <Text style={{color: Colors.Withe}}>CLEAR</Text>
+        <Text style={{ color: Colors.Withe }}>50 Result Found</Text>
+        <View style={{ flexDirection: 'row' }}>
+          <Text style={{ color: Colors.Withe, right: 10 }}>1 Sort Applied</Text>
+          <Text style={{ color: Colors.Withe }}>CLEAR</Text>
         </View>
       </View>
-      <ScrollView contentContainerStyle={{paddingBottom: 30}}>
+      <ScrollView contentContainerStyle={{ paddingBottom: 30 }}>
         {SrtData.map((value, index) => (
           <View
             key={index}
@@ -140,10 +140,10 @@ export default function AllScreen({navigation}) {
                 borderTopLeftRadius: 10,
                 borderTopRightRadius: 10,
               }}>
-              <Text style={{color: '#d3d3d3'}}>#BLRO123</Text>
-              <View style={{flexDirection: 'row'}}>
-                <Text style={{color: '#d3d3d3', right: 6}}>Generic:-</Text>
-                <Text style={{color: '#d3d3d3'}}>Garhwali</Text>
+              <Text style={{ color: '#d3d3d3' }}>#BLRO123</Text>
+              <View style={{ flexDirection: 'row' }}>
+                <Text style={{ color: '#d3d3d3', right: 6 }}>Generic:-</Text>
+                <Text style={{ color: '#d3d3d3' }}>Garhwali</Text>
               </View>
             </View>
             <View
@@ -154,8 +154,8 @@ export default function AllScreen({navigation}) {
                 top: 10,
                 alignItems: 'center',
               }}>
-              <View style={{flexDirection: 'row'}}>
-                <Text style={{color: Colors.Withe, fontSize: fontPixel(21)}}>
+              <View style={{ flexDirection: 'row' }}>
+                <Text style={{ color: Colors.Withe, fontSize: fontPixel(21) }}>
                   Pool Size:-
                 </Text>
                 <Text
@@ -176,34 +176,26 @@ export default function AllScreen({navigation}) {
                   alignItems: 'center',
                   borderRadius: 4,
                 }}>
-                <Text style={{color: Colors.Withe}}>Details</Text>
+                <Text style={{ color: Colors.Withe }}>Details</Text>
               </TouchableOpacity>
             </View>
-            <View style={{alignItems: 'center', marginTop: 20}}>
-              {/* <Progress.Bar progress={0.5} width={widthPixel(340)} height={7} color={Colors.Chinesepurple} /> */}
-              <LinearGradient
-                colors={['#962fec', '#d62abc']}
-                start={{x: 0, y: 0}}
-                end={{x: 1, y: 0}}
-                style={{
-                  height: heightPixel(7),
-                  width: widthPixel(340),
-                  backgroundColor: 'red',
-                  borderRadius: 25,
-                }}>
-                {/* <View style={{  height: heightPixel(7), width: widthPixel(340), backgroundColor: Colors.Withe }}> */}
-                {/* </View> */}
-              </LinearGradient>
-              {/* <View style={styles.container}>
-                                <SimpleGradientProgressbarView
-                                    style={styles.box}
-                                    fromColor="#FF0000"
-                                    toColor="#0000FF"
-                                    progress={0.50}
-                                    maskedCorners={[0, 0, 1, 1]}
-                                    cornerRadius={7.0}
-                                />
-                            </View> */}
+            <View style={{ alignItems: 'center', marginTop: 20 }}>
+              <View style={{ height: heightPixel(7), width: widthPixel(340), backgroundColor: Colors.Withe, borderRadius: 25 }}>
+                <LinearGradient
+                  colors={['#962fec', '#d62abc']}
+                  start={{ x: 0, y: 0 }}
+                  end={{ x: 1, y: 0 }}
+                  style={{
+                    height: heightPixel(7),
+                    width: widthPixel(190),
+                    backgroundColor: 'red',
+                    borderRadius: 25,
+                  }}>
+
+                </LinearGradient>
+              </View>
+
+
             </View>
             <View
               style={{
@@ -211,11 +203,12 @@ export default function AllScreen({navigation}) {
                 justifyContent: 'space-between',
                 paddingHorizontal: 17,
                 marginTop: 5,
+                top: 3
               }}>
-              <Text style={{color: Colors.Lightgrey, fontWeight: '500'}}>
+              <Text style={{ color: Colors.Lightgrey, fontWeight: '500' }}>
                 5,000 Left
               </Text>
-              <Text style={{color: Colors.Lightgrey, fontWeight: '500'}}>
+              <Text style={{ color: Colors.Lightgrey, fontWeight: '500' }}>
                 10,000 Slots
               </Text>
             </View>
@@ -226,9 +219,9 @@ export default function AllScreen({navigation}) {
                 paddingHorizontal: 15,
                 marginTop: 7,
               }}>
-              <View style={{alignItems: 'center'}}>
-                <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                  <Text style={{color: Colors.Withe, fontSize: fontPixel(17)}}>
+              <View style={{ alignItems: 'center' }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                  <Text style={{ color: Colors.Withe, fontSize: fontPixel(16) }}>
                     Reward
                   </Text>
                   <Text
@@ -240,14 +233,14 @@ export default function AllScreen({navigation}) {
                     5,000
                   </Text>
                 </View>
-                <Text style={{color: Colors.Withe, fontSize: fontPixel(15)}}>
+                <Text style={{ color: Colors.Withe, fontSize: fontPixel(14) }}>
                   1"5,000,2":3,000
                 </Text>
               </View>
 
-              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <Text
-                  style={{color: Colors.Withe, fontWeight: '500', right: 12}}>
+                  style={{ color: Colors.Withe, fontWeight: '500', right: 12 }}>
                   Entry
                 </Text>
                 <TouchableOpacity
@@ -259,7 +252,7 @@ export default function AllScreen({navigation}) {
                     alignItems: 'center',
                     borderRadius: 4,
                   }}>
-                  <Text style={{color: Colors.Withe, fontWeight: '500'}}>
+                  <Text style={{ color: Colors.Withe, fontWeight: '500' }}>
                     5,000
                   </Text>
                 </TouchableOpacity>
@@ -271,13 +264,13 @@ export default function AllScreen({navigation}) {
                 justifyContent: 'space-between',
                 paddingHorizontal: 15,
                 backgroundColor: '#504F4F',
-                paddingVertical: 5,
+                paddingVertical: 6,
                 borderBottomLeftRadius: 10,
                 borderBottomRightRadius: 10,
                 marginVertical: 8,
               }}>
-              <View style={{flexDirection: 'row'}}>
-                <Text style={{color: Colors.Withe, fontSize: fontPixel(15)}}>
+              <View style={{ flexDirection: 'row' }}>
+                <Text style={{ color: Colors.Withe, fontSize: fontPixel(15) }}>
                   Start at: 8 Pm
                 </Text>
                 <Text
@@ -290,7 +283,7 @@ export default function AllScreen({navigation}) {
                 </Text>
               </View>
 
-              <Text style={{color: Colors.Withe, fontSize: fontPixel(15)}}>
+              <Text style={{ color: Colors.Withe, fontSize: fontPixel(15) }}>
                 04-Jan-2023
               </Text>
             </View>

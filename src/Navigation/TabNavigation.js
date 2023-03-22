@@ -26,8 +26,6 @@ function TabNavigation() {
                 tabBarActiveTintColor: Colors.Chinesepurple,
                 // tabBarShowLabel: false,
                 tabBarHideOnKeyboard: true,
-
-
                 tabBarStyle: {
                     height: 60,
                     backgroundColor: Colors.Balck,
@@ -37,8 +35,10 @@ function TabNavigation() {
                 tabBarLabelStyle: {
                     fontWeight: '500',
                     fontSize: 12,
-                    color: Colors.Withe
+                    // color: Colors.Withe
                 },
+
+
             }}>
             <Tab.Screen
                 name="Home"
@@ -106,8 +106,8 @@ function TabNavigation() {
                         <Image
                             source={tag}
                             style={{
-                                height: focused ? 30 : 20,
-                                width: focused ? 30 : 20,
+                                height: focused ? 30 : 24,
+                                width: focused ? 30 : 24,
 
                                 tintColor: focused ? Colors.Chinesepurple : Colors.Withe,
                             }}

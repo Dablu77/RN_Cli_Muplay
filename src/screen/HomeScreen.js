@@ -23,9 +23,9 @@ export default function HomeScreen({ navigation, }) {
             />
             <View style={{ flex: 1 }}>
                 <Tab.Navigator screenOptions={{
-                    tabBarLabelStyle: { fontSize: 14, fontWeight: 'bold', },
+                    tabBarLabelStyle: { fontSize: 12, fontWeight: 'bold', },
                     tabBarStyle: { backgroundColor: 'black', },
-                    tabBarItemStyle: { width: 98 },
+                    // tabBarItemStyle: { width: 90 },
                     tabBarActiveTintColor: Colors.Withe,
                     tabBarIndicatorStyle: {
                         borderBottomColor: Colors.Chinesepurple,
