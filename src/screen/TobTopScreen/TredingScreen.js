@@ -16,7 +16,7 @@ import Colors from '../../Components/utils/Colors';
 import * as Progress from 'react-native-progress';
 import LinearGradient from 'react-native-linear-gradient';
 
-export default function TredingScreen() {
+export default function TredingScreen({ navigation }) {
   const SrtData = [
     {
       PoolSize: '10,000',
@@ -115,7 +115,9 @@ export default function TredingScreen() {
           <Text style={{ color: Colors.Withe }}>CLEAR</Text>
         </View>
       </View>
-      <ScrollView contentContainerStyle={{ paddingBottom: 30 }}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 30 }}>
         {SrtData.map((value, index) => (
           <View
             key={index}
@@ -151,19 +153,20 @@ export default function TredingScreen() {
                 alignItems: 'center',
               }}>
               <View style={{ flexDirection: 'row' }}>
-                <Text style={{ color: Colors.Withe, fontSize: fontPixel(21) }}>
+                <Text style={{ color: Colors.Withe, fontSize: fontPixel(18) }}>
                   Pool Size:-
                 </Text>
                 <Text
                   style={{
                     color: Colors.Withe,
                     left: 10,
-                    fontSize: fontPixel(21),
+                    fontSize: fontPixel(18),
                   }}>
                   10,000
                 </Text>
               </View>
               <TouchableOpacity
+                onPress={() => navigation.navigate('RankWinningScreen')}
                 style={{
                   paddingVertical: 6,
                   backgroundColor: "#3259f6",
@@ -175,7 +178,6 @@ export default function TredingScreen() {
               </TouchableOpacity>
             </View>
             <View style={{ alignItems: 'center', marginTop: 20 }}>
-              {/* <Progress.Bar progress={0.5} width={widthPixel(340)} height={7} color={Colors.Chinesepurple} /> */}
               <View style={{ height: heightPixel(7), width: widthPixel(340), backgroundColor: Colors.Withe, borderRadius: 25 }}>
                 <LinearGradient
                   colors={['#962fec', '#d62abc']}
@@ -187,10 +189,11 @@ export default function TredingScreen() {
                     backgroundColor: 'red',
                     borderRadius: 25,
                   }}>
-                  {/* <View style={{  height: heightPixel(7), width: widthPixel(340), backgroundColor: Colors.Withe }}> */}
-                  {/* </View> */}
+
                 </LinearGradient>
               </View>
+
+
             </View>
             <View
               style={{
@@ -198,12 +201,12 @@ export default function TredingScreen() {
                 justifyContent: 'space-between',
                 paddingHorizontal: 17,
                 marginTop: 5,
-                top: 3,
+                top: 3
               }}>
-              <Text style={{ color: Colors.Lightgrey, fontWeight: '500' }}>
+              <Text style={{ color: Colors.Lightgrey, fontWeight: '500', fontSize: fontPixel(12) }}>
                 5,000 Left
               </Text>
-              <Text style={{ color: Colors.Lightgrey, fontWeight: '500' }}>
+              <Text style={{ color: Colors.Lightgrey, fontWeight: '500', fontSize: fontPixel(12) }}>
                 10,000 Slots
               </Text>
             </View>
@@ -214,22 +217,22 @@ export default function TredingScreen() {
                 paddingHorizontal: 15,
                 marginTop: 7,
               }}>
-              <View style={{ alignItems: 'center' }}>
-                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                  <Text style={{ color: Colors.Withe, fontSize: fontPixel(16) }}>
+              <View style={{ alignItems: 'flex-start', }}>
+                <View style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
+                  <Text style={{ color: Colors.Withe, fontSize: fontPixel(14), }}>
                     Reward
                   </Text>
                   <Text
                     style={{
                       color: Colors.Withe,
-                      fontSize: fontPixel(17),
-                      left: 10,
+                      fontSize: fontPixel(15),
+                      left: 5,
                     }}>
                     5,000
                   </Text>
                 </View>
                 <Text style={{ color: Colors.Withe, fontSize: fontPixel(14) }}>
-                  1"5,000,2":3,000
+                  1st: 5,000,2nd: 3,00
                 </Text>
               </View>
 
@@ -239,6 +242,7 @@ export default function TredingScreen() {
                   Entry
                 </Text>
                 <TouchableOpacity
+                  onPress={() => navigation.navigate('EditSaveScreen')}
                   style={{
                     paddingVertical: 5,
                     backgroundColor: "#3259f6",

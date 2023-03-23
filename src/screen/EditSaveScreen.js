@@ -12,6 +12,7 @@ export default function EditSaveScreen({ navigation }) {
     };
 
     const SrtData = [
+
         {
             Nmae: 'janam',
         },
@@ -23,10 +24,11 @@ export default function EditSaveScreen({ navigation }) {
         },
         {
             Nmae: 'janam',
-        },
-        {
+        }, {
             Nmae: 'janam',
         },
+
+
 
     ]
     return (
@@ -52,7 +54,9 @@ export default function EditSaveScreen({ navigation }) {
                     Your Play List
                 </Text>
             </View>
-            <ScrollView contentContainerStyle={{ paddingBottom: 30, marginTop: 10 }}>
+            <ScrollView
+
+                contentContainerStyle={{ paddingBottom: 30, marginTop: 10 }}>
                 {SrtData.map((Value, index) => (
                     <TouchableOpacity
                         onPress={toggleBottomNavigationView}

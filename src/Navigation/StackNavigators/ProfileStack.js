@@ -1,10 +1,19 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import * as React from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import AllScreen from '../../screen/TobTopScreen/AllScreen';
+import ProfileScreen from '../../screen/ProfileScreen';
 
-export default function ProfileStack() {
+const Stack = createNativeStackNavigator();
+function ProfileStack() {
     return (
-        <View>
-            <Text>ProfileStack</Text>
-        </View>
-    )
+        <Stack.Navigator initialRouteName="Splash">
+            <Stack.Screen
+                name="ProfileScreen"
+                component={ProfileScreen}
+                options={{ headerShown: false }}
+            />
+        </Stack.Navigator>
+    );
 }
+
+export default ProfileStack;

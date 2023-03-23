@@ -85,7 +85,9 @@ export default function Completed({ navigation }) {
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: Colors.Balck }}>
 
-            <ScrollView contentContainerStyle={{ paddingBottom: 30, }}>
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                contentContainerStyle={{ paddingBottom: 30, }}>
                 {SrtData.map((value, index) => (
                     <View
                         key={index}
@@ -103,12 +105,12 @@ export default function Completed({ navigation }) {
                             </View>
                         </View>
                         <View style={{ flexDirection: "row", justifyContent: 'space-between', paddingHorizontal: 15, top: 10, alignItems: 'center' }}>
-                            <View>
+                            <View style={{ alignItems: 'flex-start' }}>
                                 <View style={{ flexDirection: 'row' }}>
-                                    <Text style={{ color: Colors.Withe, fontSize: fontPixel(21) }}>Pool Size:-</Text>
+                                    <Text style={{ color: Colors.Withe, fontSize: fontPixel(18) }}>Pool Size:-</Text>
                                     <Text style={{ color: Colors.Withe, left: 10, fontSize: fontPixel(21) }}>10,000</Text>
                                 </View>
-                                <Text style={{ color: '#b4b4b4', left: 10, fontSize: fontPixel(21) }}>#1028DE</Text>
+                                <Text style={{ color: '#b4b4b4', fontSize: fontPixel(18) }}>#1028DE</Text>
                             </View>
                             <TouchableOpacity
                                 onPress={() => navigation.navigate("EditSaveScreen")}

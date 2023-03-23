@@ -57,7 +57,9 @@ export default function MyPool({ navigation }) {
   ];
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: Colors.Balck }}>
-      <ScrollView contentContainerStyle={{ paddingBottom: 30 }}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 30 }}>
         {SrtData.map((value, index) => (
           <View
             key={index}
@@ -93,14 +95,14 @@ export default function MyPool({ navigation }) {
                 alignItems: 'center',
               }}>
               <View style={{ flexDirection: 'row' }}>
-                <Text style={{ color: Colors.Withe, fontSize: fontPixel(21) }}>
+                <Text style={{ color: Colors.Withe, fontSize: fontPixel(17) }}>
                   Pool Size:-
                 </Text>
                 <Text
                   style={{
                     color: Colors.Withe,
                     left: 10,
-                    fontSize: fontPixel(21),
+                    fontSize: fontPixel(17),
                   }}>
                   10,000
                 </Text>
@@ -133,12 +135,13 @@ export default function MyPool({ navigation }) {
                 justifyContent: 'space-between',
                 paddingHorizontal: 17,
                 marginTop: 5,
-                top: 3
+                top: 3,
+                // alignItems: 'flex-start'
               }}>
-              <Text style={{ color: Colors.Lightgrey, fontWeight: '500' }}>
+              <Text style={{ color: Colors.Lightgrey, fontWeight: '500', fontSize: fontPixel(12) }}>
                 5,000 Left
               </Text>
-              <Text style={{ color: Colors.Lightgrey, fontWeight: '500' }}>
+              <Text style={{ color: Colors.Lightgrey, fontWeight: '500', fontSize: fontPixel(12) }}>
                 10,000 Slots
               </Text>
             </View>
@@ -149,22 +152,22 @@ export default function MyPool({ navigation }) {
                 paddingHorizontal: 15,
                 marginTop: 7,
               }}>
-              <View style={{ alignItems: 'center' }}>
+              <View style={{ alignItems: 'flex-start' }}>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                  <Text style={{ color: Colors.Withe, fontSize: fontPixel(16) }}>
+                  <Text style={{ color: Colors.Withe, fontSize: fontPixel(14) }}>
                     Reward
                   </Text>
                   <Text
                     style={{
                       color: Colors.Withe,
-                      fontSize: fontPixel(17),
-                      left: 10,
+                      fontSize: fontPixel(15),
+                      left: 5,
                     }}>
                     5,000
                   </Text>
                 </View>
                 <Text style={{ color: Colors.Withe, fontSize: fontPixel(14) }}>
-                  1"5,000,2":3,000
+                  1st: 5,000,2nd: 3,00
                 </Text>
               </View>
 
