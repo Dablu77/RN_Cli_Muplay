@@ -61,7 +61,7 @@ export default function EditSaveScreen({ navigation }) {
                         style={{ justifyContent: 'center', height: heightPixel(60), backgroundColor: "#1D1D1D", marginVertical: 10, marginHorizontal: 15, borderRadius: 50 }}>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20 }}>
                             <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
-                                {/* <Image source={require('../assets/man.png')} style={{ height: heightPixel(35), width: widthPixel(30) }} /> */}
+                                <Image source={require('../assets/man2.png')} style={{ height: heightPixel(35), width: widthPixel(30), resizeMode: 'cover', borderRadius: 4 }} />
                                 <Text style={{ fontSize: fontPixel(22), color: Colors.Withe, paddingLeft: 12 }}>1</Text>
                                 <View style={{ alignItems: 'center', }}>
                                     <Text style={{ fontSize: fontPixel(20), color: Colors.Withe, paddingLeft: 10 }}>Janam janam</Text>
