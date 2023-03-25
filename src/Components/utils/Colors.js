@@ -6,5 +6,6 @@ export default {
     Green: '#097150',
     Balck: '#000000',
     Withe: '#FFFFFF',
+    withelight: '#f5f5f5'
 
 }

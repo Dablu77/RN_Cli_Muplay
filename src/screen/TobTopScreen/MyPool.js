@@ -113,7 +113,7 @@ export default function MyPool({ navigation }) {
             </View>
             <View style={{ alignItems: 'center', marginTop: 20 }}>
               {/* <Progress.Bar progress={0.5} width={widthPixel(340)} height={7} color={Colors.Chinesepurple} /> */}
-              <View style={{ height: heightPixel(7), width: widthPixel(340), backgroundColor: Colors.Withe, borderRadius: 25 }}>
+              <View style={{ height: heightPixel(7), width: widthPixel(343), backgroundColor: Colors.Withe, borderRadius: 25 }}>
                 <LinearGradient
                   colors={['#962fec', '#d62abc']}
                   start={{ x: 0, y: 0 }}
@@ -191,36 +191,39 @@ export default function MyPool({ navigation }) {
                 </TouchableOpacity>
               </View>
             </View>
-            <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                paddingHorizontal: 15,
-                backgroundColor: '#504F4F',
-                paddingVertical: 6,
-                borderBottomLeftRadius: 10,
-                borderBottomRightRadius: 10,
-                marginVertical: 8,
-              }}>
-              <View style={{ flexDirection: 'row' }}>
+            <View style={{ flex: 1, justifyContent: 'flex-end' }}>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  paddingHorizontal: 15,
+                  backgroundColor: '#504F4F',
+                  paddingVertical: 6,
+                  borderBottomLeftRadius: 10,
+                  borderBottomRightRadius: 10,
+
+                }}>
+                <View style={{ flexDirection: 'row' }}>
+                  <Text style={{ color: Colors.Withe, fontSize: fontPixel(15) }}>
+                    Start at: 8 Pm
+                  </Text>
+                  <Text
+                    style={{
+                      color: Colors.Withe,
+                      left: 15,
+                      fontSize: fontPixel(15),
+                    }}>
+                    End at: 10 Am
+                  </Text>
+                </View>
+
                 <Text style={{ color: Colors.Withe, fontSize: fontPixel(15) }}>
-                  Start at: 8 Pm
-                </Text>
-                <Text
-                  style={{
-                    color: Colors.Withe,
-                    left: 15,
-                    fontSize: fontPixel(15),
-                  }}>
-                  End at: 10 Am
+                  04-Jan-2023
                 </Text>
               </View>
-
-              <Text style={{ color: Colors.Withe, fontSize: fontPixel(15) }}>
-                04-Jan-2023
-              </Text>
             </View>
           </View>
+
         ))}
       </ScrollView>
     </SafeAreaView>

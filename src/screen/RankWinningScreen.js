@@ -63,7 +63,7 @@ export default function RankWinningScreen({ navigation }) {
         </Text>
         <View style={{ alignItems: 'center' }}>
           {/* <Progress.Bar progress={0.5} width={widthPixel(325)} height={6} color={Colors.Chinesepurple} /> */}
-          <View style={{ height: heightPixel(7), width: widthPixel(340), backgroundColor: Colors.Withe, borderRadius: 25 }}>
+          <View style={{ height: heightPixel(7), width: widthPixel(321), backgroundColor: Colors.Withe, borderRadius: 25 }}>
             <LinearGradient
               colors={['#962fec', '#d62abc']}
               start={{ x: 0, y: 0 }}
@@ -93,18 +93,18 @@ export default function RankWinningScreen({ navigation }) {
             10,000 Slots
           </Text>
         </View>
-
-        <View
-          style={{
-            paddingHorizontal: 15,
-            backgroundColor: '#2a2a2a',
-            paddingVertical: 5,
-            borderBottomLeftRadius: 10,
-            borderBottomRightRadius: 10,
-            marginTop: 15,
-            alignItems: 'center',
-          }}>
-          <Text style={{ color: '#5c5c5c', fontWeight: '500' }}>20 Min Left</Text>
+        <View style={{ flex: 1, justifyContent: 'flex-end' }}>
+          <View
+            style={{
+              paddingHorizontal: 15,
+              backgroundColor: '#2a2a2a',
+              paddingVertical: 5,
+              borderBottomLeftRadius: 10,
+              borderBottomRightRadius: 10,
+              alignItems: 'center',
+            }}>
+            <Text style={{ color: '#5c5c5c', fontWeight: '500' }}>20 Min Left</Text>
+          </View>
         </View>
       </View>
       <TouchableOpacity
@@ -136,13 +136,8 @@ export default function RankWinningScreen({ navigation }) {
               borderBottomColor: Colors.Chinesepurple,
               borderBottomWidth: 2,
               width: widthPixel(100),
-              // marginLeft: "%"
               marginHorizontal: 18
             },
-
-
-
-
           }}>
           <Tab.Screen name="Reward" component={Reward} />
           <Tab.Screen name="Leaderboard" component={Leaderboard} />
