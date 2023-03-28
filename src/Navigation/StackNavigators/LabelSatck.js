@@ -1,10 +1,63 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React, { useRef } from 'react';
+import { Animated, PanResponder, StyleSheet, Text, View } from 'react-native';
 
-export default function LabelSatck() {
+const PanResponderEg = () => {
+    const pan = useRef(new Animated.ValueXY()).current;
+
+    const panResponder = useRef(
+        PanResponder.create({
+            onMoveShouldSetPanResponder: () => true,
+            onPanResponderGrant: () => {
+                pan.setOffset({
+                    x: pan.x._value,
+                    y: pan.y._value,
+                });
+            },
+            onPanResponderMove: Animated.event([null, { dx: pan.x, dy: pan.y }], { useNativeDriver: false }),
+            onPanResponderRelease: () => {
+                pan.flattenOffset();
+            },
+        })
+    ).current;
+
     return (
-        <View>
-            <Text>LabelSatck</Text>
+        <View style={styles.container}>
+            <Text style={styles.titleText}>Drag this box!</Text>
+            <Animated.View
+                style={{
+                    transform: [{ translateX: pan.x }, { translateY: pan.y }],
+                }}
+                {...panResponder.panHandlers}>
+                <View style={styles.box} />
+
+                <Animated.View
+                    style={{
+                        transform: [{ translateX: pan.x }, { translateY: pan.y }],
+                    }}
+                    {...panResponder.panHandlers}>
+                    <View style={styles.box} /></Animated.View>
+            </Animated.View>
         </View>
-    )
-}
+    );
+};
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    titleText: {
+        fontSize: 14,
+        lineHeight: 24,
+        fontWeight: 'bold',
+    },
+    box: {
+        height: 150,
+        width: 150,
+        backgroundColor: 'blue',
+        borderRadius: 5,
+    },
+});
+
+export default PanResponderEg;
