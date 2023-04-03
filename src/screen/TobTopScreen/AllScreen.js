@@ -27,7 +27,7 @@ export default function AllScreen({ navigation }) {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
-    }, 10000)
+    }, 1000)
   }, [])
 
   const SrtData = [

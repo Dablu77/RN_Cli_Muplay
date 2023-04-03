@@ -17,12 +17,16 @@ import {
 import Colors from '../Components/utils/Colors';
 import { TextInput, RadioButton, Switch } from 'react-native-paper';
 
-export default function ProfileScreen() {
+export default function ProfileScreen({ navigation }) {
   const [input, setinput] = useState('');
   const [gender, setGender] = useState('');
   const [isSwitchOn, setIsSwitchOn] = React.useState(false);
+  const [isSwitchOn1, setIsSwitchOn1] = React.useState(false);
+
 
   const onToggleSwitch = () => setIsSwitchOn(!isSwitchOn);
+  const onToggleSwitch1 = () => setIsSwitchOn1(!isSwitchOn1);
+
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -86,7 +90,7 @@ export default function ProfileScreen() {
         <View style={{ paddingHorizontal: 10, marginTop: 30 }}>
           <TextInput
             label="Name"
-            value={input}
+            // value={input}
             style={{
               height: heightPixel(60),
               color: Colors.Balck,
@@ -95,11 +99,11 @@ export default function ProfileScreen() {
               elevation: 10,
               borderColor: Colors.Lightgrey,
             }}
-            onChangeText={text => setinput(text)}
+          // onChangeText={text => setinput(text)}
           />
           <TextInput
             label="Email"
-            value={input}
+            // value={input}
             style={{
               marginTop: 15,
               height: heightPixel(60),
@@ -109,11 +113,11 @@ export default function ProfileScreen() {
               elevation: 10,
               borderColor: Colors.Lightgrey,
             }}
-            onChangeText={text => setinput(text)}
+          // onChangeText={text => setinput(text)}
           />
           <TextInput
             label="Mobile"
-            value={input}
+            // value={input}
             style={{
               marginTop: 15,
               height: heightPixel(60),
@@ -123,11 +127,11 @@ export default function ProfileScreen() {
               elevation: 10,
               borderColor: Colors.Lightgrey,
             }}
-            onChangeText={text => setinput(text)}
+          // onChangeText={text => setinput(text)}
           />
           <TextInput
             label="Date of Birth"
-            value={input}
+            // value={input}
             style={{
               marginTop: 15,
               height: heightPixel(60),
@@ -137,7 +141,7 @@ export default function ProfileScreen() {
               elevation: 10,
               borderColor: Colors.Lightgrey,
             }}
-            onChangeText={text => setinput(text)}
+          // onChangeText={text => setinput(text)}
           />
           <View>
             <Text style={{ color: Colors.Balck, paddingHorizontal: 5, marginTop: 20, }}>
@@ -167,8 +171,8 @@ export default function ProfileScreen() {
               </View>
               <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <RadioButton
-                  value="female"
-                  status={gender === 'female' ? 'checked' : 'unchecked'}
+                  value="others"
+                  status={gender === 'others' ? 'checked' : 'unchecked'}
                   onPress={() => setGender('others')}
                 />
                 <Text style={{ fontWeight: '500', color: Colors.Balck }}>
@@ -191,7 +195,10 @@ export default function ProfileScreen() {
               Allow SMS notifications
             </Text>
             <TouchableOpacity>
-              <Switch value={isSwitchOn} onValueChange={onToggleSwitch} color={Colors.Chinesepurple} />
+              <Switch
+                value={isSwitchOn}
+                onValueChange={onToggleSwitch}
+                color={Colors.Chinesepurple} />
             </TouchableOpacity>
           </View>
 
@@ -205,13 +212,13 @@ export default function ProfileScreen() {
               </Text>
             </View>
             <TouchableOpacity >
-              <Switch value={isSwitchOn} onValueChange={onToggleSwitch} color={Colors.Chinesepurple} />
+              <Switch value={isSwitchOn1} onValueChange={onToggleSwitch1} color={Colors.Chinesepurple} />
             </TouchableOpacity>
           </View>
 
           <TextInput
             label="Address"
-            value={input}
+            // value={input}
             style={{
               marginTop: 30,
               height: heightPixel(60),
@@ -221,11 +228,11 @@ export default function ProfileScreen() {
               elevation: 10,
               borderColor: Colors.Lightgrey,
             }}
-            onChangeText={text => setinput(text)}
+          // onChangeText={text => setinput(text)}
           />
           <TextInput
             label="City"
-            value={input}
+            // value={input}
             style={{
               marginTop: 15,
               height: heightPixel(60),
@@ -235,11 +242,11 @@ export default function ProfileScreen() {
               elevation: 10,
               borderColor: Colors.Lightgrey,
             }}
-            onChangeText={text => setinput(text)}
+          // onChangeText={text => setinput(text)}
           />
           <TextInput
             label="Pin code"
-            value={input}
+            // value={input}
             style={{
               marginTop: 15,
               height: heightPixel(60),
@@ -249,11 +256,11 @@ export default function ProfileScreen() {
               elevation: 10,
               borderColor: Colors.Lightgrey,
             }}
-            onChangeText={text => setinput(text)}
+          // onChangeText={text => setinput(text)}
           />
           <TextInput
             label="State"
-            value={input}
+            // value={input}
             style={{
               marginTop: 15,
               height: heightPixel(60),
@@ -263,11 +270,11 @@ export default function ProfileScreen() {
               elevation: 10,
               borderColor: Colors.Lightgrey,
             }}
-            onChangeText={text => setinput(text)}
+          // onChangeText={text => setinput(text)}
           />
           <TextInput
             label="Country"
-            value={input}
+            // value={input}
             style={{
               marginTop: 15,
               height: heightPixel(60),
@@ -277,7 +284,7 @@ export default function ProfileScreen() {
               elevation: 10,
               borderColor: Colors.Lightgrey,
             }}
-            onChangeText={text => setinput(text)}
+          // onChangeText={text => setinput(text)}
           />
           <View style={{ flexDirection: 'row', justifyContent: "space-between", marginHorizontal: 10, paddingVertical: 15, alignItems: 'center' }}>
             <Text style={{ fontWeight: '500', color: Colors.Balck, fontSize: fontPixel(17) }}>
@@ -305,7 +312,7 @@ export default function ProfileScreen() {
           <View style={{ alignItems: 'center', marginVertical: 30, }}>
             <TouchableOpacity
               style={{
-                backgroundColor: 'green',
+                backgroundColor: Colors.Chinesepurple,
                 marginVertical: 25,
                 paddingVertical: 8,
                 width: widthPixel(140),
